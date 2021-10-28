@@ -1,0 +1,9 @@
+version: "3.4"
+services:
+  sql-server-database:
+    build:
+      context: .
+      dockerfile: test-Db.Dockerfile
+    container_name: sql-server-database
+    ports:
+      - "1433:1433"
