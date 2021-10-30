@@ -9,8 +9,8 @@ using testProject2.Models;
 namespace testProject2.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211013105936_MigrationOfEmployees")]
-    partial class MigrationOfEmployees
+    [Migration("20211030180231_SeedEmployeeData")]
+    partial class SeedEmployeeData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,6 +42,22 @@ namespace testProject2.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Employees");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 3,
+                            Department = 2,
+                            Email = "elon.musk@gmail.com",
+                            Name = "Elon Musk"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Department = 2,
+                            Email = "bezos.jeff@gmail.com",
+                            Name = "Jeff Bezos"
+                        });
                 });
 #pragma warning restore 612, 618
         }

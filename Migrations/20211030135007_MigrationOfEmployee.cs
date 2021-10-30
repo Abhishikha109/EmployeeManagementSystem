@@ -2,7 +2,7 @@
 
 namespace testProject2.Migrations
 {
-    public partial class MigrationOfEmployees : Migration
+    public partial class MigrationOfEmployee : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
